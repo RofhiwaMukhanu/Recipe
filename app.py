@@ -3,7 +3,7 @@ import psycopg2
 
 app = Flask(__name__)
 
-# Database configuration
+
 DB_CONFIG = {
     'host': 'localhost',
     'database': 'Recipe',
@@ -19,7 +19,7 @@ def get_db_connection():
 def index():
     return render_template('index.html')
 
-# CRUD API Endpoints
+
 
 @app.route('/recipes', methods=['GET'])
 def get_recipes():
@@ -69,6 +69,9 @@ def delete_recipe(id):
     cur.close()
     conn.close()
     return jsonify({'message': 'Recipe deleted successfully!'})
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -8,21 +8,22 @@
     <div class="container">
         <h1>Recipe Manager</h1>
 
-        <!-- Add Recipe Form -->
+        
         <div class="form-container">
             <h2>Add New Recipe</h2>
             <form id="recipeForm">
-                <input type="text" id="title" placeholder="Recipe Title" required>
-                <textarea id="ingredients" placeholder="Ingredients" required></textarea>
+                <input type="text" id="title" placeholder="Recipe Title" required><br><br>
+                <textarea id="ingredients" placeholder="Ingredients" required></textarea><br><br>
                 <textarea id="instructions" placeholder="Instructions" required></textarea>
                 <button type="submit">Add Recipe</button>
             </form>
         </div>
 
-        <!-- Recipes List -->
+        
         <div class="recipes-list" id="recipesList"></div>
     </div>
 
+    
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

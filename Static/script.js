@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const recipeForm = document.getElementById('recipeForm');
     const recipesList = document.getElementById('recipesList');
     
-    // Load recipes on page load
+    
     fetchRecipes();
     
-    // Form submit handler
+    
     recipeForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const recipe = {
@@ -65,12 +65,12 @@ async function editRecipe(id) {
     const response = await fetch(`/recipes/${id}`);
     const recipe = await response.json();
     
-    // Populate form with recipe data
+    
     document.getElementById('title').value = recipe.title;
     document.getElementById('ingredients').value = recipe.ingredients;
     document.getElementById('instructions').value = recipe.instructions;
     
-    // Change form to update mode
+    
     const form = document.getElementById('recipeForm');
     form.onsubmit = async (e) => {
         e.preventDefault();
